@@ -1,0 +1,45 @@
+# Composer dependencies
+/vendor/
+
+# Composer lock file
+/composer.lock
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Cache and logs
+/var/cache/*
+/var/logs/*
+!var/cache/.gitkeep
+!var/logs/.gitkeep
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE and editor folders
+/.idea/
+/.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# User-specific files
+*.php_cs.cache
+*.phpunit.result.cache
+
+# Build artifacts
+/build/
+/dist/
+
+# Other common ignore patterns
+/node_modules/
+npm-debug.log
+yarn-error.log

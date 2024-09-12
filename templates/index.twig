@@ -1,0 +1,19 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>Todo List</h1>
+    <ul>
+    {% for todo in todos %}
+        <li>
+            <span style="text-decoration: {{ todo.completed ? 'line-through' : 'none' }}">{{ todo.task }}</span>
+            <a href="/toggle/{{ todo.id }}">{{ todo.completed ? 'Undo' : 'Complete' }}</a>
+            <a href="/edit/{{ todo.id }}">Edit</a>
+            <a href="/delete/{{ todo.id }}">Delete</a>
+        </li>
+    {% endfor %}
+    </ul>
+    <form action="/add" method="post">
+        <input type="text" name="todo" required>
+        <button type="submit">Add Todo</button>
+    </form>
+{% endblock %}
